@@ -1,9 +1,35 @@
 ---
-
+const header = Astro.props.header;
+const tekst = Astro.props.tekst;
+const image = Astro.props.image;
 ---
 
-<article>
-  <h2></h2>
+<article class="card">
+  <img src={image} alt={header} width="170" height="170" />
+  <p>
+    {tekst}
+  </p>
 </article>
 
-<style></style>
+<style>
+  .wrapper img {
+    width: 100%;
+    height: auto;
+  }
+
+  img {
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+  .card:hover {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+  }
+</style>

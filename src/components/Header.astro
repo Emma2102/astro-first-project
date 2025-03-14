@@ -1,0 +1,95 @@
+---
+export let placeholder: string = "Hvad vil du afspille?";
+---
+
+<header class="header">
+  <!-- Venstre sektion -->
+  <div class="header-left">
+    <button class="nav-button">←</button>
+    <button class="nav-button">→</button>
+    <button class="home-button">
+      <img src="/home-icon.svg" alt="Home" />
+    </button>
+    <input type="text" class="search-box" placeholder={placeholder} />
+  </div>
+
+  <!-- Højre sektion -->
+  <div class="header-right">
+    <button class="icon-button">🔔</button>
+    <button class="icon-button">👥</button>
+    <button class="profile-button">
+      <img src="/profile-icon.svg" alt="Profile" />
+    </button>
+  </div>
+</header>
+
+<style>
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    padding: 10px 20px;
+    color: white;
+  }
+
+  .header-left,
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .nav-button {
+    background: none;
+    border: none;
+    color: gray;
+    cursor: pointer;
+    font-size: 18px;
+  }
+
+  .nav-button:hover {
+    color: white;
+  }
+
+  .search-box {
+    background: #1a1a1a;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: none;
+    width: 300px;
+  }
+
+  .search-box:focus {
+    outline: none;
+  }
+
+  .home-button,
+  .profile-button {
+    background: #333;
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .home-button img,
+  .profile-button img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .icon-button {
+    background: none;
+    border: none;
+    color: gray;
+    cursor: pointer;
+    font-size: 18px;
+  }
+
+  .icon-button:hover {
+    color: white;
+  }
+</style>

@@ -1,0 +1,26 @@
+body {
+  font-family: sans-serif;
+  background-color: black;
+}
+
+h1,
+header {
+  color: white;
+  font-size: 25px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 10px;
+}
+
+p {
+  color: rgb(174, 174, 174);
+  font-size: 14px;
+}
+
+main {
+  background-color: #121212;
+  padding: 20px;
+}
